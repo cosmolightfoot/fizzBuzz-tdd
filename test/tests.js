@@ -1,6 +1,28 @@
 
 const test = QUnit.test;
 
-test('time to write a test', function(assert) {
-    assert.equal(true, false);
+function even(number) {
+    if (number % 2 === 0) {
+    
+        return true;
+    }
+    else {
+        return false;
+    }
+
+}
+
+test('is it even?', function(assert) {
+        const number = 10;
+        const expect = true;
+        const result = even(number);
+    assert.equal(result, expect);
+    
+});
+
+test('returns false if number', function(assert){
+        const number = 11; 
+        const expect = false;
+        const result = even(number)
+        assert.equal(result, expect);
 });
